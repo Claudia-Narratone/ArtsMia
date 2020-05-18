@@ -2,6 +2,7 @@ package it.polito.tdp.artsmia.db;
 
 import java.util.List;
 
+import it.polito.tdp.artsmia.model.Adiacenza;
 import it.polito.tdp.artsmia.model.ArtObject;
 
 public class TestArtsmiaDAO {
@@ -10,9 +11,12 @@ public class TestArtsmiaDAO {
 
 		ArtsmiaDAO dao = new ArtsmiaDAO();
 			
-		List<ArtObject> objects = dao.listObjects();
-		System.out.println(objects.get(0));
-		System.out.println(objects.size());
+		//List<ArtObject> objects = dao.listObjects();
+		//System.out.println(objects.get(0));
+		//System.out.println(objects.size());
+		
+		List<Adiacenza> adiacenze=dao.getAdiacenze();
+		System.out.println(adiacenze.size());
 	}
 
 }
